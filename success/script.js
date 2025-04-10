@@ -32,7 +32,8 @@ function loadPhotos() {
         photoDiv.style.setProperty('--rotation', `${getRandomRotation()}deg`);
         
         const img = document.createElement('img');
-        img.src = `../Photos/foto${i}.jpg`;
+        // Ajustando o caminho para funcionar no Cloudflare Pages
+        img.src = `/Photos/foto${i}.jpg`;
         img.alt = 'Nossa foto';
         
         // Adicionar tratamento de erro para imagens que não carregam
